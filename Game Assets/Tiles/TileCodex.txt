@@ -1,3 +1,4 @@
+//Beach Textures
 0x00 Sand
 0x01 Grassy Sand
 0x02 Pipeline
@@ -8,7 +9,7 @@
 0x07 Grass
 0x08 Water
 
-
+//Water Textures
 0x09 Polluted Water
 0x0A BShore
 0x0B BShoreLC
@@ -19,7 +20,7 @@
 0x10 RShore
 0x11 RShoreBC
 
-
+//Cave Textures
 0x12 Dirt
 0x13 CaveL
 0x14 CaveR
@@ -30,7 +31,7 @@
 0x19 CaveLTC
 0x1A CaveLBC
 
-
+//Fence Textures
 0x1B FenceR
 0x1C FenceL
 0x1D FenceT
@@ -39,3 +40,9 @@
 0x1F FenceLTC
 0x20 FenceRBC
 0x21 FenceRTC
+
+//Pawn Shop Textures
+
+
+//Misc Textures
+
