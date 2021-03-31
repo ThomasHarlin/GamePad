@@ -42,7 +42,23 @@
 0x21 FenceRTC
 
 //Pawn Shop Textures
+0x22 Drywall
+0x23 Carpet
+0x24 Dirty Carpet
+0x25 Display Case Left
+0x26 Display Case Right
+0x27 Display Case Top
+0x28 Display Case BLeft
+0x29 Display Case TLeft
+0x2A Display Case BRight
+0x2B Display Case TRight
 
 
 //Misc Textures
+0x2C Dock
+0x2D RoadTop
+0x0E RoadBottom
+
+
+
 
