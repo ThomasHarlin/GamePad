@@ -5,7 +5,7 @@
 #define tileW 16         // 16 Tiles Across
 #define tileH 12         // 12 Tiles Down
 #define tileSize 20      // Tile Width (in pixels)
-#define numLevels 6      // Number of Levels
+#define numLevels 2      // Number of Levels
 
 
 
