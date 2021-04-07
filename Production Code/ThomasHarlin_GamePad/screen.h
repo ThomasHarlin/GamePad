@@ -16,6 +16,7 @@ DMAMEM uint16_t screenBuffer[screenW * screenH];                    // Screen Bu
 Metro tester = Metro(2000);
 bool flop = true;
 
+//////////////////////////////////////////////////////////////////////////////////////
 //function to initilize the screen
 void initScreen() {
 
@@ -42,5 +43,5 @@ void screenTest() {
     tft.fillScreen(ILI9341_BLACK);      // Clear Screen
   }
 
-tft.updateScreen();
+  tft.updateScreen();
 }
