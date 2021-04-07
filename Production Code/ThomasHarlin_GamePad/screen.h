@@ -21,7 +21,7 @@ bool flop = true;
 void initScreen() {
 
   tft.begin();                            // Connect to LCD Screen
-  tft.setRotation(1);                   // Rotate Screen 90 Degrees
+  tft.setRotation(3);                   // Rotate Screen 270 Degrees
 
   tft.setFrameBuffer(screenBuffer);   // Initialize Frame Buffer
   tft.useFrameBuffer(1);                // Use Frame Buffer

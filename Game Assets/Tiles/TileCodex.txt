@@ -7,9 +7,9 @@
 0x05 Banana Sand
 0x06 Trashbag Sand
 0x07 Grass
-0x08 Water
 
 //Water Textures
+0x08 Water
 0x09 Polluted Water
 0x0A BShore
 0x0B BShoreLC
@@ -48,21 +48,25 @@
 0x26 Display Case Left
 0x27 Display Case Right
 0x28 Display Case Top
-0x29 Display Case BLeft
-0x2A Display Case TLeft
-0x2B Display Case BRight
-0x2C Display Case TRight
+0x29 Display Case Bottom
+0x2A Display Case BLeft
+0x2B Display Case TLeft
+0x2C Display Case BRight
+0x2D Display Case TRight
 
 
 //Misc Textures
-0x2D Dock
-0x2E RoadTop
-0x2F RoadBottom
-0x30 Umbrella
-0x31 TowelTop
-0x32 TowelBottom
-0x33 PalmSand
-0x34 PalmGrass
+0x2E Dock
+0x2F RoadTop
+0x30 RoadBottom
+0x31 Umbrella
+0x32 TowelTop
+0x33 TowelBottom
+0x34 PalmSand
+0x35 PalmGrass
+0x36 Boat Top
+0x37 Boat Bottom
+
 
 
 

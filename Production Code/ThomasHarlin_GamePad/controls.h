@@ -94,7 +94,12 @@ void getControls() {
   }
 
 
-  //prints out the current data of the controls
+}
+//////////////////////////////////////////////////////////////////////////////////////
+//control output tester
+void testControls() {
+
+
   if (buttonCheck.check()) {
     //print pots
     for (int i = 0; i < 2; i++) {
