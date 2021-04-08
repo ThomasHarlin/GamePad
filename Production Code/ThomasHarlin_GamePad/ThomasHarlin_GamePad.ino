@@ -22,12 +22,13 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  fps();
+  //fps();
   //screenTest();
-  drawLevel(0);
+  //drawLevel(1);
   //testJoy();
   getControls();
   //testControls();
+  drawHero();
 
 }
 //////////////////////////////////////////////////////////////////////////////////////
