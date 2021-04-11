@@ -9,7 +9,7 @@ int heroW = BeachcomberBarry_W + margin;
 int heroH = BeachcomberBarry_H + margin;
 
 
-float heroSpeed = 1.0;
+float heroSpeed = .5;
 
 //tracks the direction hero is facing
 //false = left, true = right
@@ -19,7 +19,7 @@ int heroMove = false;
 
 int heroFrame = 2;
 int heroOffset = 4;
-Metro heroFrameTimer = Metro(250);
+Metro heroFrameTimer = Metro(300);
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -75,7 +75,7 @@ void drawHero() {
 
 
   //draws the background level and character
-  drawLevel(1);
+  drawLevel(5);
   tft.setClipRect(heroX - margin, heroY - margin, heroW, heroH);
   tft.drawRGBBitmap(heroX, heroY, BeachcomberBarry_PIX[heroFrame], BeachcomberBarry_MASK[heroFrame], BeachcomberBarry_W, BeachcomberBarry_H);
   tft.updateScreen();
