@@ -7,6 +7,8 @@
 #include "tile.h"
 #include "controls.h"
 #include "hero.h"
+#include "modes.h"
+
 
 
 
@@ -28,7 +30,7 @@ void loop() {
   //testJoy();
   getControls();
   //testControls();
-  drawHero();
+  //drawHero();
 
 }
 //////////////////////////////////////////////////////////////////////////////////////
