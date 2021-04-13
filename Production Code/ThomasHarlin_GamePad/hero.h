@@ -1,12 +1,15 @@
 #include "BeachComberBarry_MASK.h"
 #include "BeachComberBarry_PIX.h"
 
+float tempX;
+float tempY;
+
 
 float heroX = screenW / 2;
 float heroY = screenH / 2;
 int margin = 2;
-int heroW = BeachcomberBarry_W + (margin*2);
-int heroH = BeachcomberBarry_H + (margin*2);
+int heroW = BeachcomberBarry_W + (margin * 2);
+int heroH = BeachcomberBarry_H + (margin * 2);
 
 
 float heroSpeed = .5;
@@ -25,8 +28,25 @@ Metro heroFrameTimer = Metro(300);
 //////////////////////////////////////////////////////////////////////////////////////
 //Function to Draw my character
 void drawHero() {
-  heroX = heroX + (joyBuffer[0] * heroSpeed);
-  heroY = heroY + (joyBuffer[1] * heroSpeed);
+
+  //makes a preview of the hero cordiantes
+  tempX = heroX + (joyBuffer[0] * heroSpeed);
+  tempY = heroY + (joyBuffer[1] * heroSpeed);
+
+  if (tempX >= (screenW - BeachcomberBarry_W) || tempX <= 0) {
+    heroX = heroX;
+  }
+
+  else {
+    heroX = tempX;
+  }
+
+  if (tempY >= (screenH - (60 + BeachcomberBarry_H)) || tempY <= 0) {
+    heroY = heroY;
+  }
+  else {
+    heroY = tempY;
+  }
 
 
 
@@ -75,7 +95,7 @@ void drawHero() {
 
 
   //draws the background level and character
- 
+
   tft.setClipRect(heroX - margin, heroY - margin, heroW, heroH);
   tft.drawRGBBitmap(heroX, heroY, BeachcomberBarry_PIX[heroFrame], BeachcomberBarry_MASK[heroFrame], BeachcomberBarry_W, BeachcomberBarry_H);
 

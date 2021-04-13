@@ -60,43 +60,92 @@ void firstLevel() {
 //////////////////////////////////////////////////////////////////////////////////////
 //screen 1
 void secondLevel() {
-  drawHero();
+  if (scr1 == false) {
+    drawLevel(1);
+    scr1 = true;
+  }
+  else {
+    drawLevel(1);
+    drawHero();
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
 //screen 2
 void thirdLevel() {
-  drawHero();
+  if (scr2 == false) {
+    drawLevel(2);
+    scr2 = true;
+  }
+  else {
+    drawLevel(2);
+    drawHero();
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
 //screen 3
 void fourthLevel() {
-  drawHero();
+  if (scr3 == false) {
+    drawLevel(3);
+    scr3 = true;
+  }
+  else {
+    drawLevel(3);
+    drawHero();
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
 //screen 4
 void fifthLevel() {
-  drawHero();
+  if (scr4 == false) {
+    drawLevel(4);
+    scr4 = true;
+  }
+  else {
+    drawLevel(4);
+    drawHero();
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
 //screen 5
 void sixthLevel() {
-  drawHero();
+  if (scr5 == false) {
+    drawLevel(5);
+    scr5 = true;
+  }
+  else {
+    drawLevel(5);
+    drawHero();
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
 //screen 6
 void seventhLevel() {
-  drawHero();
+  if (scr6 == false) {
+    drawLevel(6);
+    scr6 = true;
+  }
+  else {
+    drawLevel(6);
+    drawHero();
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
 //screen 7
 void eighthLevel() {
-  drawHero();
+  if (scr7 == false) {
+    drawLevel(7);
+    scr7 = true;
+  }
+  else {
+    drawLevel(7);
+    drawHero();
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -104,6 +153,9 @@ void runMode() {
   switch (curMode) {
     //intro
     case -1: introScreen( ); break;
+    /////////////////////////////////////////
+    //Main Beach Areas
+    /////////////////////////////////////////
     //pawn shop
     case 0: firstLevel( ); break;
     //Sandwater public beach
@@ -116,6 +168,9 @@ void runMode() {
     case 4: fifthLevel( ); break;
     //Road out of Sandwater
     case 5: sixthLevel( ); break;
+    /////////////////////////////////////////
+    //Hidden Areas
+    /////////////////////////////////////////
     //secret Drug Cave
     case 6: seventhLevel( ); break;
     //Ernesto Secret Island
