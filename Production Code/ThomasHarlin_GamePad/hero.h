@@ -2,11 +2,11 @@
 #include "BeachComberBarry_PIX.h"
 
 
-int heroX = screenW / 2;
-int heroY = screenH / 2;
+float heroX = screenW / 2;
+float heroY = screenH / 2;
 int margin = 2;
-int heroW = BeachcomberBarry_W + margin;
-int heroH = BeachcomberBarry_H + margin;
+int heroW = BeachcomberBarry_W + (margin*2);
+int heroH = BeachcomberBarry_H + (margin*2);
 
 
 float heroSpeed = .5;
@@ -75,10 +75,9 @@ void drawHero() {
 
 
   //draws the background level and character
-  drawLevel(5);
+ 
   tft.setClipRect(heroX - margin, heroY - margin, heroW, heroH);
   tft.drawRGBBitmap(heroX, heroY, BeachcomberBarry_PIX[heroFrame], BeachcomberBarry_MASK[heroFrame], BeachcomberBarry_W, BeachcomberBarry_H);
-  tft.updateScreen();
 
 
 }

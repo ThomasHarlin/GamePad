@@ -30,7 +30,10 @@ void loop() {
   //testJoy();
   getControls();
   //testControls();
-  //drawHero();
+  runMode();
+ // drawHero();
+
+ tft.updateScreen();
 
 }
 //////////////////////////////////////////////////////////////////////////////////////
