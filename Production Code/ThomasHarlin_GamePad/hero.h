@@ -18,7 +18,9 @@ float heroSpeed = .5;
 //false = left, true = right
 bool heroDir = false;
 //false = standing animation, true = walking animation
-int heroMove = false;
+bool heroMove = false;
+
+
 
 int heroFrame = 2;
 int heroOffset = 4;
@@ -72,6 +74,7 @@ void drawHero() {
 
     //is the joystick being touched?
     if (heroMove) {
+
       //moving right animation
       if (heroDir) {
         if (heroFrame > 5 || heroFrame < 2) {

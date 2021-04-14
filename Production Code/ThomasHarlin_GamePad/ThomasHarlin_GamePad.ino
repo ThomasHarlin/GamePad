@@ -14,7 +14,6 @@
 
 void setup() {
   // put your setup code here, to run once:
-
   Serial.begin(9600);
   initScreen();
   initControls();
@@ -31,9 +30,9 @@ void loop() {
   getControls();
   //testControls();
   runMode();
- // drawHero();
+  // drawHero();
 
- tft.updateScreen();
+  tft.updateScreen();
 
 }
 //////////////////////////////////////////////////////////////////////////////////////

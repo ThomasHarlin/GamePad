@@ -3,7 +3,9 @@
 
 int introFrame = 0;
 
+int prevMode;
 int curMode = -1;
+
 bool initIntro = false;
 bool scr0 = false;
 bool scr1 = false;
