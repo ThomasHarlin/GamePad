@@ -6,6 +6,7 @@
 #include "screen.h"
 #include "tile.h"
 #include "controls.h"
+#include "interaction.h"
 #include "hero.h"
 #include "modes.h"
 

@@ -94,7 +94,17 @@ void drawHero() {
         heroFrame = 0;
       }
     }
+
+
+//    if (buttonBuffer[0] == 0) {
+//      heroFrame = 11;
+//    }
+//    if (buttonBuffer[1] == 0) {
+//      heroFrame = 10;
+//    }
+
   }
+
 
 
   //draws the background level and character

@@ -25,23 +25,28 @@ void introScreen() {
     tft.drawRGBBitmap(0, 0, BeachcomberIntro_PIX[introFrame], screenW, screenH);
     tft.updateScreen();
 
-    if (introFrame == 0) {
+    if (millis() < 1000) {
+      //stops a power surge from skipping the intro screen
+    }
+    else {
+      if (introFrame == 0) {
+        for (int i = 0; i < 4; i++) {
+          buttons[i].update();
+
+          if (buttons[i].rose()) {
+            introFrame = 1;
+          }
+        }
+      }
+    }
+    if (introFrame == 1) {
       for (int i = 0; i < 4; i++) {
         buttons[i].update();
 
         if (buttons[i].rose()) {
-          introFrame = 1;
+          initIntro = true;
+          curMode = 0;
         }
-      }
-    }
-  }
-  if (introFrame == 1) {
-    for (int i = 0; i < 4; i++) {
-      buttons[i].update();
-
-      if (buttons[i].rose()) {
-        initIntro = true;
-        curMode = 0;
       }
     }
   }
