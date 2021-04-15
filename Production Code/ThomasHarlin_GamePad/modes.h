@@ -4,7 +4,6 @@
 int introFrame = 0;
 
 int prevMode;
-int curMode = -1;
 
 bool initIntro = false;
 bool scr0 = false;
@@ -184,3 +183,12 @@ void runMode() {
     case 7: eighthLevel( ); break;
   }
 }
+
+///////////////////////////
+//screen advancer
+//void moveScreen(){
+//getControls();
+//for(int i = 0; i<4; i++){
+//  if(buttonBuffer
+//}
+//}

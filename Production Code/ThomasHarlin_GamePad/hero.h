@@ -20,7 +20,8 @@ bool heroDir = false;
 //false = standing animation, true = walking animation
 bool heroMove = false;
 
-
+//value to track a State machine for movement
+int heroState = 0;
 
 int heroFrame = 2;
 int heroOffset = 4;
@@ -35,20 +36,18 @@ void drawHero() {
   tempX = heroX + (joyBuffer[0] * heroSpeed);
   tempY = heroY + (joyBuffer[1] * heroSpeed);
 
-  if (tempX >= (screenW - BeachcomberBarry_W) || tempX <= 0) {
-    heroX = heroX;
-  }
+checkMove(curMode, tempX, tempY, heroW, heroH);
 
-  else {
-    heroX = tempX;
-  }
+if(canMove){
+  heroX = tempX;
+  heroY = tempY;
+}
+else{
+  heroX = heroX;
+  heroY = heroY;
+}
 
-  if (tempY >= (screenH - (60 + BeachcomberBarry_H)) || tempY <= 0) {
-    heroY = heroY;
-  }
-  else {
-    heroY = tempY;
-  }
+
 
 
 
@@ -96,12 +95,12 @@ void drawHero() {
     }
 
 
-//    if (buttonBuffer[0] == 0) {
-//      heroFrame = 11;
-//    }
-//    if (buttonBuffer[1] == 0) {
-//      heroFrame = 10;
-//    }
+    //    if (buttonBuffer[0] == 0) {
+    //      heroFrame = 11;
+    //    }
+    //    if (buttonBuffer[1] == 0) {
+    //      heroFrame = 10;
+    //    }
 
   }
 
@@ -115,3 +114,20 @@ void drawHero() {
 
 }
 //////////////////////////////////////////////////////////////////////////////////////
+//Tracks animation States
+//void checkAnimation (){
+//  switch (heroState) {
+//
+//    //standing animation
+//    case 0: firstLevel( ); break;
+//    //walking left
+//    case 1: secondLevel( ); break;
+//    //walking right
+//    case 2: thirdLevel( ); break;
+//    //digging / crouching
+//    case 3: fourthLevel( ); break;
+//    //detecting
+//    case 4: fifthLevel( ); break;
+//
+//  }
+//}
