@@ -56,11 +56,12 @@ void firstLevel() {
   if (scr0 == false) {
     drawLevel(0);
     scr0 = true;
+    tft.updateScreen();
   }
-  else {
+ 
     drawLevel(0);
     drawHero();
-  }
+  
 }
 
 //////////////////////////////////////////////////////////////////////////////////////

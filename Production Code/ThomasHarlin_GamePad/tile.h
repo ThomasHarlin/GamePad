@@ -126,5 +126,4 @@ void drawLevel(int thisLevel) {
 
     }
   }
-  tft.updateScreen();
 }
