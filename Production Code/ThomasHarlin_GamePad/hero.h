@@ -38,12 +38,12 @@ void drawHero() {
 
 checkMove(curMode, tempX, tempY, heroW, heroH);
 
-if(tempX > (300) || tempX < 0 || tempY > (180 - heroH) || tempY < 0){
-  heroX = heroX;
-  heroY = heroY;
-}
+//if(tempX > (300) || tempX < 0 || tempY > (180 - heroH) || tempY < 0){
+//  heroX = heroX;
+//  heroY = heroY;
+//}
 
-else if(canMove){
+ if(canMove){
   heroX = tempX;
   heroY = tempY;
 }

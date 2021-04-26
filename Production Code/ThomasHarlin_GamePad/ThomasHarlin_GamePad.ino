@@ -2,7 +2,7 @@
 //Thomas Harlin || Spring 2021
 //CRT 360 || GamePad
 
-int curMode = 6;
+int curMode = 0;
 bool hasKey = false;
 bool hasBus = false;
 

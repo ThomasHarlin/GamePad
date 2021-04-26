@@ -94,13 +94,13 @@ void secondLevel() {
     heroY = 105;
   }
 
-    //dump barrier
-    if (interaction[curMode][curTile] == 0x03) {
-      curMode = 2;
-      scr1 = false;
-      heroX = 250;
-      heroY = 110;
-    }
+  //dump barrier
+  if (interaction[curMode][curTile] == 0x03) {
+    curMode = 2;
+    scr1 = false;
+    heroX = 250;
+    heroY = 110;
+  }
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -112,11 +112,11 @@ void thirdLevel() {
     scr2 = true;
     tft.updateScreen();
   }
- 
-    drawLevel(curMode);
-    drawHero();
 
-    //Boring Beach
+  drawLevel(curMode);
+  drawHero();
+
+  //Boring Beach
   if (interaction[curMode][curTile] == 0x04) {
     curMode = 3;
     scr2 = false;
@@ -124,14 +124,14 @@ void thirdLevel() {
     heroY = 105;
   }
 
-    //public Beach
-    if (interaction[curMode][curTile] == 0x02) {
-      curMode = 1;
-      scr2 = false;
-      heroX = 60;
-      heroY = 110;
-    }
-  
+  //public Beach
+  if (interaction[curMode][curTile] == 0x02) {
+    curMode = 1;
+    scr2 = false;
+    heroX = 60;
+    heroY = 110;
+  }
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -143,10 +143,34 @@ void fourthLevel() {
     scr3 = true;
     tft.updateScreen();
   }
- 
-    drawLevel(curMode);
-    drawHero();
-  
+
+  drawLevel(curMode);
+  drawHero();
+
+  //private cove
+  if (interaction[curMode][curTile] == 0x05) {
+    curMode = 4;
+    scr3 = false;
+    heroX = 260;
+    heroY = 105;
+  }
+
+  //public dump
+  if (interaction[curMode][curTile] == 0x03) {
+    curMode = 2;
+    scr3 = false;
+    heroX = 60;
+    heroY = 110;
+  }
+
+  //secret cave
+   if (interaction[curMode][curTile] == 0x06) {
+    curMode = 5;
+    scr3 = false;
+    heroX = 60;
+    heroY = 110;
+  } 
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -158,10 +182,10 @@ void fifthLevel() {
     scr4 = true;
     tft.updateScreen();
   }
- 
-    drawLevel(curMode);
-    drawHero();
-  
+
+  drawLevel(curMode);
+  drawHero();
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -173,10 +197,10 @@ void sixthLevel() {
     scr5 = true;
     tft.updateScreen();
   }
-  
-    drawLevel(curMode);
-    drawHero();
-  
+
+  drawLevel(curMode);
+  drawHero();
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -188,10 +212,10 @@ void seventhLevel() {
     scr6 = true;
     tft.updateScreen();
   }
-  
-    drawLevel(curMode);
-    drawHero();
-  
+
+  drawLevel(curMode);
+  drawHero();
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -203,10 +227,10 @@ void eighthLevel() {
     scr7 = true;
     tft.updateScreen();
   }
-  
-    drawLevel(curMode);
-    drawHero();
-  
+
+  drawLevel(curMode);
+  drawHero();
+
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
