@@ -2,7 +2,9 @@
 //Thomas Harlin || Spring 2021
 //CRT 360 || GamePad
 
-int curMode = 0;
+int curMode = 6;
+bool hasKey = false;
+bool hasBus = false;
 
 #include "frames.h"
 #include "screen.h"

@@ -66,8 +66,10 @@
 0x35 PalmGrass
 0x36 Boat Top
 0x37 Boat Bottom
-
-
+0x38 Cave Rock L
+0x39 Cave Rock R
+0x3A Cave Chest
+0x3B Cave Coke
 
 
 
