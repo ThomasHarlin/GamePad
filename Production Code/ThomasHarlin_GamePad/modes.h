@@ -164,11 +164,11 @@ void fourthLevel() {
   }
 
   //secret cave
-   if (interaction[curMode][curTile] == 0x06) {
-    curMode = 5;
+   if ((interaction[curMode][curTile] == 0x07) && buttonBuffer[2] == 1) {
+    curMode = 6;
     scr3 = false;
-    heroX = 60;
-    heroY = 110;
+    heroX = 160;
+    heroY = 40;
   } 
 
 }
@@ -215,6 +215,14 @@ void seventhLevel() {
 
   drawLevel(curMode);
   drawHero();
+
+    //Boring Beach
+  if ((interaction[curMode][curTile] == 0x04) && buttonBuffer[2] == 1) {
+    curMode = 3;
+    scr6 = false;
+    heroX = 150;
+    heroY = 150;
+  }
 
 }
 
