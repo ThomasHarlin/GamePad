@@ -51,108 +51,162 @@ void introScreen() {
   }
 }
 //////////////////////////////////////////////////////////////////////////////////////
-//screen 0
+//screen 0 pawn shop
 void firstLevel() {
   if (scr0 == false) {
-    drawLevel(0);
+    tft.setClipRect(0, 0, screenW, screenH);
+    drawLevel(curMode);
     scr0 = true;
     tft.updateScreen();
   }
+
+  drawLevel(curMode);
+  drawHero();
+
+  //doorway interaction
+  if (interaction[curMode][curTile] == 0x02) {
+    curMode = 1;
+    scr0 = false;
+    heroX = 270;
+    heroY = 70;
+  }
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+//screen 1 public beach
+void secondLevel() {
+  if (scr1 == false) {
+    tft.setClipRect(0, 0, screenW, screenH);
+    drawLevel(curMode);
+    scr1 = true;
+    tft.updateScreen();
+  }
+
+  drawLevel(curMode);
+  drawHero();
+
+  //pawn shop door
+  if (interaction[curMode][curTile] == 0x01) {
+    curMode = 0;
+    scr1 = false;
+    heroX = 60;
+    heroY = 105;
+  }
+
+    //dump barrier
+    if (interaction[curMode][curTile] == 0x03) {
+      curMode = 2;
+      scr1 = false;
+      heroX = 250;
+      heroY = 110;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+//screen 2 public dump
+void thirdLevel() {
+  if (scr2 == false) {
+    tft.setClipRect(0, 0, screenW, screenH);
+    drawLevel(curMode);
+    scr2 = true;
+    tft.updateScreen();
+  }
  
-    drawLevel(0);
+    drawLevel(curMode);
+    drawHero();
+
+    //Boring Beach
+  if (interaction[curMode][curTile] == 0x04) {
+    curMode = 3;
+    scr2 = false;
+    heroX = 260;
+    heroY = 105;
+  }
+
+    //public Beach
+    if (interaction[curMode][curTile] == 0x02) {
+      curMode = 1;
+      scr2 = false;
+      heroX = 60;
+      heroY = 110;
+    }
+  
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+//screen 3 boring beach
+void fourthLevel() {
+  if (scr3 == false) {
+    tft.setClipRect(0, 0, screenW, screenH);
+    drawLevel(curMode);
+    scr3 = true;
+    tft.updateScreen();
+  }
+ 
+    drawLevel(curMode);
     drawHero();
   
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-//screen 1
-void secondLevel() {
-  if (scr1 == false) {
-    drawLevel(1);
-    scr1 = true;
-  }
-  else {
-    drawLevel(1);
-    drawHero();
-  }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////
-//screen 2
-void thirdLevel() {
-  if (scr2 == false) {
-    drawLevel(2);
-    scr2 = true;
-  }
-  else {
-    drawLevel(2);
-    drawHero();
-  }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////
-//screen 3
-void fourthLevel() {
-  if (scr3 == false) {
-    drawLevel(3);
-    scr3 = true;
-  }
-  else {
-    drawLevel(3);
-    drawHero();
-  }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////
-//screen 4
+//screen 4 private cove
 void fifthLevel() {
   if (scr4 == false) {
-    drawLevel(4);
+    tft.setClipRect(0, 0, screenW, screenH);
+    drawLevel(curMode);
     scr4 = true;
+    tft.updateScreen();
   }
-  else {
-    drawLevel(4);
+ 
+    drawLevel(curMode);
     drawHero();
-  }
+  
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-//screen 5
+//screen 5 last road out
 void sixthLevel() {
   if (scr5 == false) {
-    drawLevel(5);
+    tft.setClipRect(0, 0, screenW, screenH);
+    drawLevel(curMode);
     scr5 = true;
+    tft.updateScreen();
   }
-  else {
-    drawLevel(5);
+  
+    drawLevel(curMode);
     drawHero();
-  }
+  
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-//screen 6
+//screen 6 secret cave
 void seventhLevel() {
   if (scr6 == false) {
-    drawLevel(6);
+    tft.setClipRect(0, 0, screenW, screenH);
+    drawLevel(curMode);
     scr6 = true;
+    tft.updateScreen();
   }
-  else {
-    drawLevel(6);
+  
+    drawLevel(curMode);
     drawHero();
-  }
+  
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-//screen 7
+//screen 7 private island
 void eighthLevel() {
   if (scr7 == false) {
-    drawLevel(7);
+    tft.setClipRect(0, 0, screenW, screenH);
+    drawLevel(curMode);
     scr7 = true;
+    tft.updateScreen();
   }
-  else {
-    drawLevel(7);
+  
+    drawLevel(curMode);
     drawHero();
-  }
+  
 }
 
 //////////////////////////////////////////////////////////////////////////////////////

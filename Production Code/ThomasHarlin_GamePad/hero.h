@@ -6,7 +6,7 @@ float tempY;
 
 
 float heroX = screenW / 2;
-float heroY = screenH / 2;
+float heroY = 100;
 int margin = 2;
 int heroW = BeachcomberBarry_W + (margin * 2);
 int heroH = BeachcomberBarry_H + (margin * 2);
@@ -38,7 +38,12 @@ void drawHero() {
 
 checkMove(curMode, tempX, tempY, heroW, heroH);
 
-if(canMove){
+if(tempX > (300) || tempX < 0 || tempY > (180 - heroH) || tempY < 0){
+  heroX = heroX;
+  heroY = heroY;
+}
+
+else if(canMove){
   heroX = tempX;
   heroY = tempY;
 }
